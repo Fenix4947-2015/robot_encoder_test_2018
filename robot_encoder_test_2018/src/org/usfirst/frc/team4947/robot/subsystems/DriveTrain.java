@@ -81,8 +81,8 @@ public class DriveTrain extends Subsystem {
 		// Set the peak and nominal outputs, 12V means full.
 		motor.configNominalOutputForward(0, DriveTrainConstants.kTimeoutMs);
 		motor.configNominalOutputReverse(0, DriveTrainConstants.kTimeoutMs);
-		motor.configPeakOutputForward(1, DriveTrainConstants.kTimeoutMs);
-		motor.configPeakOutputReverse(-1, DriveTrainConstants.kTimeoutMs);
+		motor.configPeakOutputForward(PERCENT_OUTPUT, DriveTrainConstants.kTimeoutMs);
+		motor.configPeakOutputReverse(-PERCENT_OUTPUT, DriveTrainConstants.kTimeoutMs);
 
 		// Set the allowable closed-loop error, Closed-Loop output will be neutral within this range.
 		// See Table in Section 17.2.1 for native units per rotation.
