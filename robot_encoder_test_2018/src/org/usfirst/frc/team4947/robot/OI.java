@@ -7,6 +7,7 @@
 
 package org.usfirst.frc.team4947.robot;
 
+import org.usfirst.frc.team4947.robot.commands.DriveDistance;
 import org.usfirst.frc.team4947.robot.commands.DriveForward;
 import org.usfirst.frc.team4947.robot.commands.DriveReverse;
 
@@ -66,7 +67,9 @@ public class OI {
         
         driverX.whileHeld(new DriveForward());
         driverA.whileHeld(new DriveReverse());
-		
+        
+        driverY.whenPressed(new DriveDistance());
+
 		return joystick;
 	}
 	
