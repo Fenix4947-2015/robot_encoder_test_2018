@@ -6,6 +6,7 @@ import com.ctre.phoenix.motorcontrol.ControlMode;
 import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
 
 import edu.wpi.first.wpilibj.command.Subsystem;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 public class DriveTrain extends Subsystem {
 	
@@ -49,5 +50,13 @@ public class DriveTrain extends Subsystem {
 	private void setPercentOutput(double percentOutput) {
 		leftMotor1.set(ControlMode.PercentOutput, percentOutput);
 		rightMotor1.set(ControlMode.PercentOutput, percentOutput);
+	}
+	
+	public void dump() {
+		SmartDashboard.putNumber("Left sensor velocity", leftMotor1.getSelectedSensorVelocity(0));
+		SmartDashboard.putNumber("Left sensor position", leftMotor1.getSelectedSensorPosition(0));
+
+		SmartDashboard.putNumber("Right sensor velocity", rightMotor1.getSelectedSensorVelocity(0));
+		SmartDashboard.putNumber("Right sensor position", rightMotor1.getSelectedSensorPosition(0));
 	}
 }
