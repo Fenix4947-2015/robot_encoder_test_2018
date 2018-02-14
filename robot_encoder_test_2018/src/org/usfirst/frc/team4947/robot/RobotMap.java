@@ -18,9 +18,6 @@ public class RobotMap {
 	public static final int DRIVER_JOYSTICK_PORT = 0;
 	
 	// Drive train.
-	public static final int LEFT_MOTOR1_ADDRESS = 1;
-	public static final int LEFT_MOTOR2_ADDRESS = 4;
-
-	public static final int RIGHT_MOTOR1_ADDRESS = 2;
-	public static final int RIGHT_MOTOR2_ADDRESS = 0;
+	public static final int LEFT_MOTOR1_ADDRESS = 3;
+	public static final int RIGHT_MOTOR1_ADDRESS = 7;
 }

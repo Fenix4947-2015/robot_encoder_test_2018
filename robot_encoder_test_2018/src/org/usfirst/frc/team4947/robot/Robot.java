@@ -43,6 +43,7 @@ public class Robot extends TimedRobot {
 
 	@Override
 	public void disabledInit() {
+		driveTrain.stop();
 	}
 
 	@Override
@@ -73,6 +74,8 @@ public class Robot extends TimedRobot {
 	@Override
 	public void teleopPeriodic() {
 		Scheduler.getInstance().run();
+		
+		driveTrain.dump();
 	}
 
 	@Override

@@ -14,7 +14,7 @@ import edu.wpi.first.wpilibj.command.Command;
 public class DriveDistance extends Command {
 	
 	// Constants.
-	private static final double DISTANCE_FEET = 2.0;
+	private static final double DISTANCE_FEET = 21.0;
 
 	public DriveDistance() {
 		requires(Robot.driveTrain);
@@ -31,7 +31,7 @@ public class DriveDistance extends Command {
 
 	@Override
 	protected boolean isFinished() {
-		return false;
+		return true;
 	}
 
 	@Override
@@ -41,6 +41,5 @@ public class DriveDistance extends Command {
 
 	@Override
 	protected void end() {
-		Robot.driveTrain.stop();
 	}
 }
